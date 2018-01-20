@@ -12,11 +12,11 @@ namespace Example_1.Communication
     {
         Socket serverSocket;
         List<ClientHandler> clientList = new List<ClientHandler>();
-        Action<string> UpdateGui;
+        //Action<string> UpdateGui;
 
-        public Server(int port, Action<string> updateGui)
+        public Server(int port)
         {
-            this.UpdateGui = updateGui;
+            //this.UpdateGui = updateGui;
 
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             serverSocket.Bind(new IPEndPoint(IPAddress.Loopback, port));

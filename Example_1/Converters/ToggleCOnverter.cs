@@ -12,16 +12,15 @@ namespace Example_1.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string temp = value.ToString();
+            bool temp = (bool)value;
 
-            if (temp == "Green")
+            if (temp)
             {
                 return "Orange";
             }
             else
-            {
-                return "Orange";
-            }
+                return "Green";
+            
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

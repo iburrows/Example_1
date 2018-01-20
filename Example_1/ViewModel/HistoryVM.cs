@@ -4,13 +4,23 @@
     {
 
         public string ButtonId { get; set; }
-        public string State { get; set; }
+        public bool State { get; set; }
         public string TimeStamp { get; set; }
-        public HistoryVM(string buttonId, string state, string timeStamp)
+        public string Color { get; set; }
+        public HistoryVM(string buttonId, bool state, string timeStamp)
         {
             ButtonId = buttonId;
-            State = state;
+            
             TimeStamp = timeStamp;
+
+            if (state)
+            {
+                Color = "Green";
+            }
+            else
+            {
+                Color = "Orange";
+            }
         }
 
     }

@@ -1,34 +1,28 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
+using System.Collections.ObjectModel;
 
 namespace Example_1.ViewModel
 {
-    /// <summary>
-    /// This class contains properties that the main View can data bind to.
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
-    /// </summary>
+
     public class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
+        public RelayCommand ListenButton { get; set; }
+        public RelayCommand ConnectButton { get; set; }
+        public RelayCommand Toggle_1 { get; set; }
+        public RelayCommand Toggle_2 { get; set; }
+        public RelayCommand Toggle_3 { get; set; }
+        public RelayCommand Toggle_4 { get; set; }
+        public ObservableCollection<HistoryVM> HistoryList { get; set; }
+
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            ListenButton = new RelayCommand(()=> { });
+            ConnectButton = new RelayCommand(() => { });
+            Toggle_1 = new RelayCommand(() => { });
+            Toggle_2= new RelayCommand(() => { });
+            Toggle_3 = new RelayCommand(() => { });
+            Toggle_4 = new RelayCommand(() => { });
         }
     }
 }
